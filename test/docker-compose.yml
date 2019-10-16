@@ -1,0 +1,8 @@
+version: '3'
+services:
+    pentaho-kettle-awsbatch:
+        image: oncase/pentaho-kettle-awsbatch:latest
+        container_name: pentaho-kettle-awsbatch
+        command: ${JOB_OR_TRANS} ${JOB_OR_TRANS_PATH}
+        env_file: 
+          - test.env
